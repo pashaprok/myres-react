@@ -4,6 +4,7 @@ import BannerStartSection from './BannerStartSectionComponent'
 import Image from 'react-bootstrap/Image'
 import Loading from './LoadingComponent'
 import { Link } from 'react-router-dom'
+import BtnFluid from './buttons/BtnFluid'
 import { baseUrl } from '../shared/baseUrl'
 
 function RenderDishMenuItem({ dish }) {
@@ -121,11 +122,12 @@ const Restor = (props) => {
                     </div>
                 </div>
             </section>
-            <Link to="/rooms">
-                <button className="back-btn-fluid">
-                    <i className="fas fa-store-alt"></i> go to rooms list
-                </button>
-            </Link>
+            <BtnFluid
+                half={false}
+                link="/rooms"
+                text="go to rooms list"
+                icon={<i className="fas fa-store-alt"></i>}
+            />
         </div>
     )
 }

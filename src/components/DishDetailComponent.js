@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react'
-import { Link } from 'react-router-dom'
+import BtnFluid from './buttons/BtnFluid'
 import {  Modal, ModalBody, ModalFooter, Row, Col, Button } from 'reactstrap'
 import { Control, LocalForm, Errors } from 'react-redux-form'
 import Image from 'react-bootstrap/Image'
@@ -200,11 +200,12 @@ const DishDetail = (props) => {
                         </div>
                     </div>
                 </div>
-                <Link to="/restaurant">
-                    <button className="back-btn-fluid">
-                        <i className="fas fa-arrow-left"></i> back to dishes list
-                    </button>
-                </Link>
+                <BtnFluid
+                    half={false}
+                    link="/restaurant"
+                    text="back to dishes list"
+                    icon={<i className="fas fa-arrow-left"></i>}
+                />
             </div>
         );
     }

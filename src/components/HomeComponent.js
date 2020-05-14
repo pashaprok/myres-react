@@ -5,8 +5,8 @@ import MobileSection from './MobileSectionComponent'
 import TitleSection from './TitleSectionComponent'
 import Slider from "react-slick"
 import { baseUrl } from '../shared/baseUrl'
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import Loading from './LoadingComponent'
 import Image from 'react-bootstrap/Image'
 

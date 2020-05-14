@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Loading from './LoadingComponent'
-import { Link } from 'react-router-dom'
+import BtnFluid from './buttons/BtnFluid'
 import StartSection from './StartSectionComponent'
 import BannerStartSection from './BannerStartSectionComponent'
 import { Button, Col, Row } from 'reactstrap'
@@ -246,11 +246,12 @@ export default class Reservation extends Component {
                         </div>
                     </div>
                 </div>
-                <Link to="/rooms">
-                    <button className="back-btn-fluid">
-                        <i className="fas fa-arrow-left"></i> back to rooms list
-                    </button>
-                </Link>
+                <BtnFluid
+                    half={false}
+                    link="/rooms"
+                    text="back to rooms list"
+                    icon={<i className="fas fa-arrow-left"></i>}
+                />
             </div>
         )
     }

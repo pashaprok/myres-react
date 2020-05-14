@@ -242,6 +242,7 @@
 }
 .slide>img {
   width: 100%;
+  object-fit: cover;
 }
 .home-start-slider .slick-dots {
   position: absolute;
@@ -327,6 +328,7 @@
   color: var(--mainWhite);
 }
 .nav-link {
+  padding: 8px 0 8px 20px;
   transition: var(--transitionDefault);
   color: var(--mainLight);
 }
@@ -372,9 +374,6 @@
   color: var(--mainWhite);
 }
 
-@media only screen and (max-width : 992px) {
-
-}
 
 @media only screen and (max-width : 768px) {
   .header-menu {
@@ -383,13 +382,6 @@
   }
 }
 
-@media only screen and (max-width : 480px) {
-
-}
-
-@media only screen and (max-width : 320px) {
-
-}
 
 
 /* --- header navbar end --- */
@@ -922,34 +914,7 @@
 .dish-card-description {
   font-weight: 300;
 }
-.back-btn-fluid.half {
-  width: 50%;
-}
-.back-btn-fluid {
-  width: 100%;
-  padding: 30px;
-  text-align: center;
-  background-color: var(--mainWhite);
-  border: none;
-  color: var(--mainDark);
-  transition: var(--transitionDefault);
-  font-size: 20px;
-}
-.back-btn-fluid i {
-  opacity: 0;
-  transition: var(--transitionDefault);
-}
-.back-btn-fluid:hover i {
-  opacity: 1;
-}
-.back-btn-fluid:hover {
-  color: var(--mainWhite);
-  background-color: var(--mainSecondLight);
-}
-.back-btn-fluid:active {
-  color: var(--mainWhite);
-  background-color: var(--mainDark);
-}
+
 .dish-card-image {
   position: relative;
 }
@@ -1164,22 +1129,6 @@
   font-weight: 300;
   margin: 0;
 }
-.room-info .btn-detail {
-  font-weight: 700;
-  margin-top: 15px;
-  width: 150px;
-  padding: 10px;
-  text-align: center;
-  border: none;
-  outline: none;
-  background-color: var(--mainDark);
-  transition: var(--transitionDefault);
-  color: var(--mainWhite);
-}
-.room-info .btn-detail:hover {
-  text-decoration: none;
-  background-color: var(--mainBright);
-}
 
 @media only screen and (max-width : 1200px) {
   .room-photos {
@@ -1198,7 +1147,7 @@
     width: 100%;
     margin: 0;
   }
-  .room-info .btn-detail {
+  .room-info .btn-dark {
     width: 100%;
   }
 }

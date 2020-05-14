@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import BtnFluid from './buttons/BtnFluid'
 import { Row, Col, Button } from 'reactstrap'
 import { Control, LocalForm, Errors } from 'react-redux-form'
 import Image from 'react-bootstrap/Image'
@@ -276,16 +276,18 @@ const RoomDetail = (props) => {
                         </div>
                     </div>
                 </div>
-                <Link to="/rooms">
-                    <button className="back-btn-fluid half">
-                        <i className="fas fa-arrow-left"></i> back to rooms list
-                    </button>
-                </Link>
-                <Link to="/reservation">
-                    <button className="back-btn-fluid half">
-                        <i className="fas fa-store-alt"></i> reserve room
-                    </button>
-                </Link>
+                <BtnFluid
+                    half={true}
+                    link="/rooms"
+                    text="back to rooms list"
+                    icon={<i className="fas fa-arrow-left"></i>}
+                />
+                <BtnFluid
+                    half={true}
+                    link="/reservation"
+                    text="reserve room"
+                    icon={<i className="fas fa-store-alt"></i>}
+                />
             </div>
         );
     }

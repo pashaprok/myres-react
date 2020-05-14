@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import BtnFluid from '../buttons/BtnFluid'
 import StartSection from '../StartSectionComponent'
 import BannerStartSection from '../BannerStartSectionComponent'
 import Form from './WeatherForm'
@@ -117,11 +117,12 @@ export default class WeatherApp extends Component {
                     </div>
                   </div>
               </div>
-              <Link to="/apps">
-                        <button className="back-btn-fluid">
-                            <i className="fas fa-arrow-left"></i> apps list
-                        </button>
-              </Link>
+              <BtnFluid
+                half={false}
+                link="/apps"
+                text="apps list"
+                icon={<i className="fas fa-arrow-left"></i>}
+              />
           </div>
         )
       }

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import StartSection from './StartSectionComponent'
 import BannerStartSection from './BannerStartSectionComponent'
+import BtnFluid from './buttons/BtnFluid'
+import BtnDark from './buttons/BtnDark'
 import Image from 'react-bootstrap/Image'
 import Loading from './LoadingComponent'
 import { Link } from 'react-router-dom'
@@ -52,9 +54,11 @@ function RenderRoomItem({ room }) {
                 <p className="description">
                     {room.description}
                 </p>
-                <Link to={`/rooms/${room.id}`} className="btn-detail">
-                    <i className="fas fa-info"></i> open more
-                </Link>
+                <BtnDark
+                    link={`/rooms/${room.id}`}
+                    icon={<i className="fas fa-info"></i>}
+                    text="open more"
+                />
             </div>
        </div> 
     );
@@ -175,11 +179,12 @@ const Rooms = (props) => {
                     </div>
                 </div>
             </section>
-            <Link to="/reservation">
-                <button className="back-btn-fluid">
-                    <i className="fas fa-store-alt"></i> reserve room
-                </button>
-            </Link>
+            <BtnFluid
+                half={false}
+                link="/reservation"
+                text="reserve room"
+                icon={<i className="fas fa-store-alt"></i>}
+            />
         </div>
     )
 }
